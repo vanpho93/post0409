@@ -6,7 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <h3>aaa</h3>
+        <% arrPerson.forEach(person => { %>
+            <div>
+                <h3>Ten: <%= person.name %></h3>
+                <p>Tuoi: <%= person.age %></p>
+            </div>
+        <% }); %>
     </body>
     <script src="reload/reload.js"></script>
 </html>
