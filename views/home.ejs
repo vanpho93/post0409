@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+        <h1><%= name %></h1>
+        <h1><%= address %></h1>
+        <h1><%= district %></h1>
         <%- include('./partials/header.ejs', { name: 'Ti' }) %>
         <% arrPerson.forEach(person => { %>
             <%- include('./partials/row.ejs', { person }) %>
