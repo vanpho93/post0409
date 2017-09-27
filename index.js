@@ -1,5 +1,8 @@
 const express = require('express');
 const reload = require('reload');
+const bodyParser = require('body-parser');
+
+const parser = bodyParser.urlencoded({ extended: false });
 const app = express();
 
 let arrPerson = [
@@ -10,9 +13,6 @@ let arrPerson = [
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
-
-// app.locals.name = 'Khoa Pham Online';
-// app.locals.address = '92 Le Thi Rieng';
 
 app.locals = {
     name: 'Khoa Pham Online',
@@ -25,6 +25,11 @@ app.use(express.static('./public'));
 app.get('/', (req, res) => res.render('home', { arrPerson }));
 
 app.get('/signin', (req, res) => res.render('signin'));
+
+app.post('/signin', parser, (req, res) => {
+    console.log(req.body);
+    res.send('AAA');
+});
 
 reload(app);
 
