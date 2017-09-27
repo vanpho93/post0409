@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<% const a = 100 %>
+<% const b = 100 %>
+<% const isAdmin = false %>
+<% const arrSubjects = ['NodeJS', 'Angular', 'Javascript'] %>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1><%= a + b %></h1>
+
+        <% arrSubjects.forEach(subject => { %>
+            <h3><%= subject %></h3>
+        <% }); %>
+
+        <% if(isAdmin) { %>
+            <p>33</p>
+        <% } %>
+
+        <% if(isAdmin) { %>
+            <p>Ban la admin</p>
+        <% } else { %>
+            <p>Ban ko phai la admin</p>
+        <% } %>
+        <img src="a.png" alt="">
+    </body>
+    <script src="reload/reload.js"></script>
+</html>
